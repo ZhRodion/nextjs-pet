@@ -1,0 +1,74 @@
+.mainFooter {
+	width: 100%;
+	padding: 30px 0 68px;
+	background-color: #262022;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.mainFooterWrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footerFirstColumn {
+	width: 100%;
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+}
+
+.footerLogoWrapper {
+	display: flex;
+	gap: 9px;
+}
+
+.footerLogoText {
+	color: #fdcf55;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.footerText {
+	color: #fff;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.footerSecondColumn {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.footerContactHeading {
+	color: #fdcf55;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.footerContactsList {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+}
+
+.footerContactsLink {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	align-content: center;
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}

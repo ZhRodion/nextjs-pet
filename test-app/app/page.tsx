@@ -1,10 +1,7 @@
-import styles from '@/page.module.scss'
-import RootLayout from './layout'
+import { FC } from 'react'
 
-export default function Home() {
-	return (
-		<RootLayout>
-			<main className={styles.main}></main>
-		</RootLayout>
-	)
+const AppPage: FC = () => {
+	return <h1></h1>
 }
+
+export default AppPage
