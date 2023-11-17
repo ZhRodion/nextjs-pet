@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 	description: 'Bear Shop for testing some stuff',
 }
 
-const AppPage: FC = () => {
+const AppMainPage: FC = () => {
 	return <CatalogSection />
 }
 
-export default AppPage
+export default AppMainPage

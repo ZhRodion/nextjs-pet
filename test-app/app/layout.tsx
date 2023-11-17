@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import { FC } from 'react'
 import MainFooter from './components/Footer/MainFooter/MainFooter'
 import HeroSection from './components/HeroSection/HeroSection'
+
 const inter = Inter({ subsets: ['cyrillic'] })
 
 export const metadata: Metadata = {

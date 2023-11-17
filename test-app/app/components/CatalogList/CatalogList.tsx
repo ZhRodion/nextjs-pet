@@ -21,7 +21,8 @@ const CatalogList: FC<CatalogListProps> = ({ items }) => {
 				<div className={styles.catalogItem} key={item.id}>
 					<Link
 						className={styles.catalogItemLink}
-						href={item.catalogItemLink}
+						href={`/products/[productId]`}
+						as={`/products/${encodeURIComponent(item.catalogItemLink)}`}
 						key={index}
 					>
 						<Image
@@ -30,6 +31,8 @@ const CatalogList: FC<CatalogListProps> = ({ items }) => {
 							width={214}
 							height={571}
 							quality={100}
+							loading='lazy'
+							sizes='100vw'
 							alt={'.Catalog card image'}
 						/>
 						<div className={styles.catalogItemTextWrapper}>

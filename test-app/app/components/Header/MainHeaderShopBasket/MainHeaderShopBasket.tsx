@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const MainHeaderShopBasket: FC = () => {
 	return (
 		<div className={styles.mainHeaderBasketWrapper}>
-			<Link href='/shopping-basket'>
+			<Link href='/shoping-basket'>
 				<Image
 					src='/img/vector/shop-basket.svg'
 					width={30}

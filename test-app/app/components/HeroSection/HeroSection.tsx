@@ -16,6 +16,7 @@ const HeroSection: FC<HeroSectionProps> = ({ sectionTitle }) => {
 				width={1920}
 				height={390}
 				quality={100}
+				// layout='responsive'
 			/>
 			<div className={`${'container'} ${styles.heroSectionWrapper}`}>
 				<h1 className={styles.heroTitle}>{sectionTitle}</h1>
