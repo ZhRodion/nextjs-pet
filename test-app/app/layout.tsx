@@ -1,12 +1,12 @@
-import MainHeader from '@/components/Header/MainHeader/MainHeader'
+import MainHeader from '@/../components/Header/MainHeader/MainHeader'
+import Providers from '@/GlobalRedux/provider'
 import '@/globals.scss'
 import styles from '@/page.module.scss'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { FC } from 'react'
-import MainFooter from './components/Footer/MainFooter/MainFooter'
-import HeroSection from './components/HeroSection/HeroSection'
-
+import MainFooter from '../components/Footer/MainFooter/MainFooter'
+import HeroSection from '../components/HeroSection/HeroSection'
 const inter = Inter({ subsets: ['cyrillic'] })
 
 export const metadata: Metadata = {
@@ -22,12 +22,14 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 	return (
 		<html lang='ru'>
 			<body className={inter.className}>
-				<MainHeader />
-				<main className={styles.main}>
-					<HeroSection sectionTitle='Каталог' />
-					{children}
-				</main>
-				<MainFooter />
+				<Providers>
+					<MainHeader />
+					<main className={styles.main}>
+						<HeroSection sectionTitle='Каталог' />
+						{children}
+					</main>
+					<MainFooter />
+				</Providers>
 			</body>
 		</html>
 	)

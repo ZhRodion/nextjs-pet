@@ -1,4 +1,6 @@
-import CatalogList from '@/components/CatalogList/CatalogList'
+'use client'
+
+import CatalogList from '@/../components/CatalogList/CatalogList'
 import styles from '@/components/CatalogSection/CatalogSection.module.scss'
 import { FC } from 'react'
 

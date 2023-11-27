@@ -1,4 +1,4 @@
-import CatalogSection from '@/components/CatalogSection/CatalogSection'
+import CatalogSection from '@/../components/CatalogSection/CatalogSection'
 import { Metadata } from 'next'
 import { FC } from 'react'
 
