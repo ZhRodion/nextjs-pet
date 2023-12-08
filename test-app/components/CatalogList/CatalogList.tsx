@@ -1,4 +1,4 @@
-import styles from '@/components/CatalogList/CatalogList.module.scss'
+import styles from '@/CatalogList/CatalogList.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'

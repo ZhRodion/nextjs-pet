@@ -1,7 +1,7 @@
 'use client'
 
-import CatalogList from '@/../components/CatalogList/CatalogList'
-import styles from '@/components/CatalogSection/CatalogSection.module.scss'
+import CatalogList from '@/CatalogList/CatalogList'
+import styles from '@/CatalogSection/CatalogSection.module.scss'
 import { FC } from 'react'
 
 const CatalogSection: FC = () => {

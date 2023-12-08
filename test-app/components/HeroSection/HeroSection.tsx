@@ -1,4 +1,4 @@
-import styles from '@/components/HeroSection/HeroSection.module.scss'
+import styles from '@/HeroSection/HeroSection.module.scss'
 import Image from 'next/image'
 import { FC } from 'react'
 

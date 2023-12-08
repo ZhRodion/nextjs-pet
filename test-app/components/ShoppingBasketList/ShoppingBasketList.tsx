@@ -1,4 +1,4 @@
-import styles from '@/components/ShoppingBasketList/ShoppingBasketList.module.scss'
+import styles from '@/ShoppingBasketList/ShoppingBasketList.module.scss'
 import { FC } from 'react'
 
 const ShoppingBasketList: FC = () => {

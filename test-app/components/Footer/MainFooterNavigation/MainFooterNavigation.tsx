@@ -1,4 +1,4 @@
-import styles from '@/components/Footer/MainFooterNavigation/MainFooterNavigation.module.scss'
+import styles from '@/Footer/MainFooterNavigation/MainFooterNavigation.module.scss'
 import Link from 'next/link'
 import { FC } from 'react'
 

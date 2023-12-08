@@ -1,4 +1,4 @@
-import styles from '@/components/SocialMedia/SocialMedia.module.scss'
+import styles from '@/SocialMedia/SocialMedia.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'

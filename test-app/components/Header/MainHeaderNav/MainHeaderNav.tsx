@@ -1,4 +1,4 @@
-import styles from '@/components/Header/MainHeaderNav/MainHeaderNav.module.scss'
+import styles from '@/Header/MainHeaderNav/MainHeaderNav.module.scss'
 import Link from 'next/link'
 import { FC } from 'react'
 

@@ -1,4 +1,4 @@
-import styles from '@/components/Header/MainHeaderShopBasket/MainHeaderShopBasket.module.scss'
+import styles from '@/Header/MainHeaderShopBasket/MainHeaderShopBasket.module.scss'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'

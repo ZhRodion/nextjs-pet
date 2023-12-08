@@ -1,10 +1,8 @@
-import MainHeaderNav, {
-	ListItem,
-} from '@/../components/Header/MainHeaderNav/MainHeaderNav'
-import MainHeaderSearch from '@/../components/Header/MainHeaderSearch/MainHeaderSearch'
-import MainHeaderShopBasket from '@/../components/Header/MainHeaderShopBasket/MainHeaderShopBasket'
-import SocialMedia from '@/../components/SocialMedia/SocialMedia'
-import styles from '@/components/Header/MainHeader/MainHeader.module.scss'
+import styles from '@/Header/MainHeader/MainHeader.module.scss'
+import MainHeaderNav, { ListItem } from '@/Header/MainHeaderNav/MainHeaderNav'
+import MainHeaderSearch from '@/Header/MainHeaderSearch/MainHeaderSearch'
+import MainHeaderShopBasket from '@/Header/MainHeaderShopBasket/MainHeaderShopBasket'
+import SocialMedia from '@/SocialMedia/SocialMedia'
 import Image from 'next/image'
 import { FC } from 'react'
 
