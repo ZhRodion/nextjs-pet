@@ -1,3 +1,9 @@
 .shgoippingBasketList {
 	width: 100%;
 }
+
+.shoppingBasketListWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}

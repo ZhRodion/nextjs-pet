@@ -1,6 +1,5 @@
-import MainHeader from '@/../components/Header/MainHeader/MainHeader'
-import Providers from '@/GlobalRedux/provider'
 import '@/globals.scss'
+import MainHeader from '@/Header/MainHeader/MainHeader'
 import styles from '@/page.module.scss'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -22,14 +21,12 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 	return (
 		<html lang='ru'>
 			<body className={inter.className}>
-				<Providers>
-					<MainHeader />
-					<main className={styles.main}>
-						<HeroSection sectionTitle='Каталог' />
-						{children}
-					</main>
-					<MainFooter />
-				</Providers>
+				<MainHeader />
+				<main className={styles.main}>
+					<HeroSection sectionTitle='Каталог' />
+					{children}
+				</main>
+				<MainFooter />
 			</body>
 		</html>
 	)
