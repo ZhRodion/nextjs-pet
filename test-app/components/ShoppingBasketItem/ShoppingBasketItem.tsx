@@ -4,7 +4,6 @@ import { FC } from 'react'
 
 interface ShoppingBasketItemProps {
 	id: number
-	catalogItemLink: string
 	cardImgSrc: string
 	catalogCardHeading: string
 	catalogItemDescription: string
@@ -19,7 +18,7 @@ const ShoppingBasketItem: FC<ShoppingBasketItemProps> = ({
 	catalogItemPrice,
 }) => {
 	return (
-		<div className={styles.shoppingBasketItem}>
+		<div className={styles.shoppingBasketItem} key={id}>
 			<Image
 				src={cardImgSrc}
 				width={214}

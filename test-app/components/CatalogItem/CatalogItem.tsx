@@ -1,4 +1,5 @@
 import styles from '@/CatalogItem/CatalogItem.module.scss'
+import useStore from '@/zustand.store'
 import Image from 'next/image'
 import { FC } from 'react'
 
@@ -17,6 +18,18 @@ const CatalogItem: FC<CatalogItemProps> = ({
 	catalogItemDescription,
 	catalogItemPrice,
 }) => {
+	const addToBasket = useStore(state => state.addToBasket)
+
+	const handleBuyClick = () => {
+		addToBasket({
+			id,
+			cardImgSrc,
+			catalogCardHeading,
+			catalogItemDescription,
+			catalogItemPrice,
+		})
+	}
+
 	return (
 		<div className={styles.catalogItem} key={id}>
 			<Image
@@ -36,7 +49,11 @@ const CatalogItem: FC<CatalogItemProps> = ({
 				</p>
 			</div>
 			<b className={styles.catalogItemPrice}>{catalogItemPrice} ₽</b>
-			<button className={styles.catalogItemBuyBtn} type='button'>
+			<button
+				className={styles.catalogItemBuyBtn}
+				type='button'
+				onClick={handleBuyClick}
+			>
 				Купить
 			</button>
 			<button className={styles.catalogItemBuyOneClickBtn} type='button'>
