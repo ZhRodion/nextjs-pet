@@ -1,80 +1,14 @@
 'use client'
 
 import styles from '@/CatalogList/CatalogList.module.scss'
-import useStore from '@/zustand.store'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import { FC } from 'react'
 
 interface CatalogListProps {
-	items: {
-		id: number
-		catalogItemLink: string
-		cardImgSrc: string
-		catalogCardHeading: string
-		catalogItemDescription: string
-		catalogItemPrice: string
-	}[]
+	children: React.ReactNode
 }
 
-const CatalogList: FC<CatalogListProps> = ({ items }) => {
-	const setSelectedCatalogItem = useStore(state => state.setSelectedCatalogItem)
-
-	const router = useRouter()
-
-	const handleBuyButtonClick = (item: {
-		id: number
-		catalogItemLink: string
-		cardImgSrc: string
-		catalogCardHeading: string
-		catalogItemDescription: string
-		catalogItemPrice: string
-	}) => {
-		setSelectedCatalogItem(item)
-		router.push('/shoping-basket')
-	}
-
-	return (
-		<div className={styles.catalogList}>
-			{items.map((item, index) => (
-				<div className={styles.catalogItem} key={item.id}>
-					{/* <Link
-						className={styles.catalogItemLink}
-						href={`/products/[productId]`}
-						as={`/products/${encodeURIComponent(item.catalogItemLink)}`}
-						key={index}
-					> */}
-					<Image
-						className={styles.catalogItemPhoto}
-						src={item.cardImgSrc}
-						width={214}
-						height={571}
-						quality={100}
-						loading='lazy'
-						sizes='100vw'
-						alt={'.Catalog card image'}
-					/>
-					<div className={styles.catalogItemTextWrapper}>
-						<p className={styles.catalogItemHeading}>
-							{item.catalogCardHeading}
-						</p>
-						<p className={styles.catalogItemDescription}>
-							{item.catalogItemDescription}
-						</p>
-					</div>
-					<b className={styles.catalogItemPrice}>{item.catalogItemPrice} ₽</b>
-					<button
-						className={styles.catalogItemBuyBtn}
-						type='button'
-						onClick={() => handleBuyButtonClick(item)}
-					>
-						Купить
-					</button>
-					{/* </Link> */}
-				</div>
-			))}
-		</div>
-	)
+const CatalogList: FC<CatalogListProps> = ({ children }) => {
+	return <div className={styles.catalogList}>{children}</div>
 }
 
 export default CatalogList

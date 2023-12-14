@@ -1,0 +1,106 @@
+.catalogItem {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.catalogItemLink {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+
+	&:hover {
+		.catalogItemPhoto {
+			transform: scale(1.08);
+		}
+	}
+}
+
+.catalogItemPhoto {
+	width: 100%;
+	max-width: 214px;
+	height: 100%;
+	max-height: 571px;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.catalogItemTextWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.catalogItemHeading {
+	color: #000;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.catalogItemDescription {
+	color: #000;
+	text-align: center;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.catalogItemPrice {
+	color: #000;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.catalogItemBuyBtn {
+	width: 100%;
+	max-width: 175px;
+	height: 100%;
+	max-height: 37px;
+	padding: 10px 0;
+	background-color: #fdcf55;
+	border-radius: 40px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #769b54;
+		color: #fff;
+	}
+}
+
+.catalogItemBuyOneClickBtn {
+	width: 100%;
+	max-width: 175px;
+	height: 100%;
+	max-height: 37px;
+	padding: 10px 0;
+	background-color: #fdcf55;
+	border-radius: 40px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #769b54;
+		color: #fff;
+	}
+}

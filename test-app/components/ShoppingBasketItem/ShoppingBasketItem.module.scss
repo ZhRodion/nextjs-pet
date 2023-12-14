@@ -5,6 +5,8 @@
 }
 
 .shoppingBasketItem {
+	width: 100%;
+	max-width: 274px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
