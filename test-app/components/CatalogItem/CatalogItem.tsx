@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '@/CatalogItem/CatalogItem.module.scss'
 import useStore from '@/zustand.store'
 import Image from 'next/image'

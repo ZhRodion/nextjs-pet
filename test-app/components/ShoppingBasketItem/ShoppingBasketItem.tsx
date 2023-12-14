@@ -18,7 +18,7 @@ const ShoppingBasketItem: FC<ShoppingBasketItemProps> = ({
 	catalogItemPrice,
 }) => {
 	return (
-		<div className={styles.shoppingBasketItem} key={id}>
+		<div className={styles.shoppingBasketItem} key={`item_${id}`}>
 			<Image
 				src={cardImgSrc}
 				width={214}

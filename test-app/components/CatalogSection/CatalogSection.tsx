@@ -84,7 +84,7 @@ const CatalogSection: FC = () => {
 							catalogCardHeading={item.catalogCardHeading}
 							catalogItemDescription={item.catalogItemDescription}
 							catalogItemPrice={item.catalogItemPrice}
-							id={0}
+							id={item.id}
 						/>
 					))}
 				</CatalogList>

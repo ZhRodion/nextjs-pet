@@ -6,6 +6,7 @@ import useStore from '@/zustand.store'
 import styles from '../shoping-basket/shoppingBasket.module.scss'
 
 export default function PageCatalog() {
+	// Использует стор для получения состояния массива корзины
 	const basketItems = useStore(state => state.basket)
 
 	return (
@@ -13,12 +14,12 @@ export default function PageCatalog() {
 			{basketItems.length > 0 ? (
 				basketItems.map(item => (
 					<ShoppingBasketItem
-						key={item.id}
+						key={`basket_${item.id}`}
+						id={item.id}
 						cardImgSrc={item.cardImgSrc}
 						catalogCardHeading={item.catalogCardHeading}
 						catalogItemDescription={item.catalogItemDescription}
 						catalogItemPrice={item.catalogItemPrice}
-						id={0}
 					/>
 				))
 			) : (
