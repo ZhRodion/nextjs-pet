@@ -28,11 +28,11 @@ const MainHeaderShopBasket: FC = () => {
 					alt='.Main Logo'
 				></Image>
 				{basketItems && basketItems.length > 0 ? (
-					<span className={styles.shoppingBasketCount}>
+					<span className={`${styles.shoppingBasketCount} ${styles.visible}`}>
 						{basketItems.length}
 					</span>
 				) : (
-					<span></span>
+					<span className={styles.shoppingBasketCount}></span>
 				)}
 			</Link>
 		</div>
