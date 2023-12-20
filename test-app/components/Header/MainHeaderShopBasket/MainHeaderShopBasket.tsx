@@ -1,4 +1,8 @@
+'use client'
+
 import styles from '@/Header/MainHeaderShopBasket/MainHeaderShopBasket.module.scss'
+import useBasketStore from '@/zustand.store'
+import usePersistedStore from '@/zustand.usePersistedStore'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,6 +14,8 @@ export const metadata: Metadata = {
 }
 
 const MainHeaderShopBasket: FC = () => {
+	const basketItems = usePersistedStore(useBasketStore, state => state.basket)
+
 	return (
 		<div className={styles.mainHeaderBasketWrapper}>
 			<Link className={styles.mainHeaderLink} href='/shoping-basket'>
@@ -21,6 +27,13 @@ const MainHeaderShopBasket: FC = () => {
 					quality={100}
 					alt='.Main Logo'
 				></Image>
+				{basketItems && basketItems.length > 0 ? (
+					<span className={styles.shoppingBasketCount}>
+						{basketItems.length}
+					</span>
+				) : (
+					<span></span>
+				)}
 			</Link>
 		</div>
 	)

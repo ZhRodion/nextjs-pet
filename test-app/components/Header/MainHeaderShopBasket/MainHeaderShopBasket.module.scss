@@ -1,4 +1,6 @@
 .mainHeaderLink {
+	position: relative;
+
 	&:hover {
 		.mainHeaderImg {
 			transition: all 0.3s ease-in-out;
@@ -7,4 +9,20 @@
 			}
 		}
 	}
+}
+
+.shoppingBasketCount {
+	width: 20px;
+	height: 20px;
+	background-color: #769b54;
+	color: #fff;
+	border-radius: 100px;
+	position: absolute;
+	top: -25px;
+	right: -10px;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
