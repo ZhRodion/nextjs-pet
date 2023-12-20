@@ -28,8 +28,11 @@
         "./app/*",
         "./components/*",
         "./api/*",
-        "./store/*"
-      ]
+        "./store/*",
+      ],
+      "@emotion/styled": [
+        "node_modules/@emotion/styled"
+      ],
     }
   },
   "include": [
