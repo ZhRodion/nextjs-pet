@@ -1,9 +1,10 @@
 'use client'
 
 import styles from '@/CatalogItem/CatalogItem.module.scss'
-import useStore from '@/zustand.store'
+import useBasketStore from '@/zustand.store'
 import Image from 'next/image'
 import { FC } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 interface CatalogItemProps {
 	id: number
@@ -20,8 +21,10 @@ const CatalogItem: FC<CatalogItemProps> = ({
 	catalogItemDescription,
 	catalogItemPrice,
 }) => {
-	const addToBasket = useStore(state => state.addToBasket)
+	// Добавление состояния в стор
+	const addToBasket = useBasketStore(state => state.addToBasket)
 
+	// Кликом собираем пропсы конкретные
 	const handleBuyClick = () => {
 		addToBasket({
 			id,
@@ -33,7 +36,7 @@ const CatalogItem: FC<CatalogItemProps> = ({
 	}
 
 	return (
-		<div className={styles.catalogItem} key={id}>
+		<div className={styles.catalogItem} key={uuidv4()}>
 			<Image
 				className={styles.catalogItemPhoto}
 				src={cardImgSrc}

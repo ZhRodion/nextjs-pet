@@ -1,6 +1,9 @@
+'use client'
+
 import styles from '@/ShoppingBasketItem/ShoppingBasketItem.module.scss'
 import Image from 'next/image'
 import { FC } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 interface ShoppingBasketItemProps {
 	id: number
@@ -18,7 +21,7 @@ const ShoppingBasketItem: FC<ShoppingBasketItemProps> = ({
 	catalogItemPrice,
 }) => {
 	return (
-		<div className={styles.shoppingBasketItem} key={`item_${id}`}>
+		<div className={styles.shoppingBasketItem} key={uuidv4()}>
 			<Image
 				src={cardImgSrc}
 				width={214}

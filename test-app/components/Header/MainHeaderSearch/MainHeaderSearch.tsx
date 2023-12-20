@@ -6,7 +6,7 @@ import { FC } from 'react'
 const MainHeaderSearch: FC = () => {
 	return (
 		<div className={styles.mainHeaderSearch}>
-			<Link href='##'>
+			<Link className={styles.mainHeaderLink} href='##'>
 				<Image
 					className={styles.searchImage}
 					src='/img/vector/search.svg'

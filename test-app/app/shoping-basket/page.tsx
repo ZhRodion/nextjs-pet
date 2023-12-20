@@ -2,29 +2,26 @@
 
 import ShoppingBasketItem from '@/ShoppingBasketItem/ShoppingBasketItem'
 import ShoppingBasketList from '@/ShoppingBasketList/ShoppingBasketList'
-import useStore from '@/zustand.store'
-import styles from '../shoping-basket/shoppingBasket.module.scss'
+import useBasketStore from '@/zustand.store'
+import usePersistedStore from '@/zustand.usePersistedStore'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function PageCatalog() {
 	// Использует стор для получения состояния массива корзины
-	const basketItems = useStore(state => state.basket)
+	const basketItems = usePersistedStore(useBasketStore, state => state.basket)
 
 	return (
 		<ShoppingBasketList>
-			{basketItems.length > 0 ? (
-				basketItems.map(item => (
-					<ShoppingBasketItem
-						key={`basket_${item.id}`}
-						id={item.id}
-						cardImgSrc={item.cardImgSrc}
-						catalogCardHeading={item.catalogCardHeading}
-						catalogItemDescription={item.catalogItemDescription}
-						catalogItemPrice={item.catalogItemPrice}
-					/>
-				))
-			) : (
-				<p className={styles.fillBasketText}>Заполните козину :)</p>
-			)}
+			{basketItems?.map(item => (
+				<ShoppingBasketItem
+					key={uuidv4()}
+					id={item.id}
+					cardImgSrc={item.cardImgSrc}
+					catalogCardHeading={item.catalogCardHeading}
+					catalogItemDescription={item.catalogItemDescription}
+					catalogItemPrice={item.catalogItemPrice}
+				/>
+			))}
 		</ShoppingBasketList>
 	)
 }

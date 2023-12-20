@@ -6,3 +6,23 @@
 	justify-content: center;
 	gap: 15px;
 }
+
+.socMediaLink {
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		.socMediaIcon {
+			transform: scale(1.2);
+		}
+	}
+
+	&:active {
+		.socMediaIcon {
+			opacity: 0.5;
+		}
+	}
+}
+
+.socMediaIcon {
+	transition: all 0.3s ease-in-out;
+}

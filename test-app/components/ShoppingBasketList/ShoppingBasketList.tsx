@@ -1,3 +1,5 @@
+'use client'
+
 import styles from '@/ShoppingBasketList/ShoppingBasketList.module.scss'
 import { FC } from 'react'
 

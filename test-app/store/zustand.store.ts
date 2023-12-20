@@ -12,12 +12,12 @@ interface StoreState {
 }
 
 // Хранилище товаров
-const useStore = create<StoreState>()(
+const useBasketStore = create<StoreState>()(
 	devtools(
 		// Делает состояние постоянным, то есть кешит
+		// Set - обновляет состояние компонента
 		persist(
-			// Set - обновляет состояние компонента
-			set => ({
+			(set, get) => ({
 				basket: [],
 				addToBasket: item =>
 					set(state => ({ basket: [...state.basket, item] })),
@@ -27,4 +27,4 @@ const useStore = create<StoreState>()(
 	)
 )
 
-export default useStore
+export default useBasketStore
