@@ -54,3 +54,10 @@ ol {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
+.ReactModalPortal {
+	z-index: 10001;
+	position: fixed;
+	top: 0;
+	border: 0;
+}

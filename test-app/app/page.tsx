@@ -1,4 +1,5 @@
 import CatalogSection from '@/../components/CatalogSection/CatalogSection'
+import IsAdultModal from '@/IsAdultModal/IsAdultModal'
 import { Metadata } from 'next'
 import { FC } from 'react'
 
@@ -8,7 +9,12 @@ export const metadata: Metadata = {
 }
 
 const AppMainPage: FC = () => {
-	return <CatalogSection />
+	return (
+		<div>
+			<CatalogSection />
+			<IsAdultModal />
+		</div>
+	)
 }
 
 export default AppMainPage

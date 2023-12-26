@@ -1,0 +1,49 @@
+.modalPageWrapper {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+}
+
+.modalBody {
+	padding: 100px 56px;
+	position: fixed;
+	background: #262022;
+	border-radius: 15px;
+	z-index: 1000001;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url('../../public/img/vector/chmelbg.svg');
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.modalCloseBtn {
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		.closeCrossImg {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.closeCrossImg {
+	transition: all 0.3s ease-in-out;
+}
+
+.modalContent {
+	color: #fff;
+}

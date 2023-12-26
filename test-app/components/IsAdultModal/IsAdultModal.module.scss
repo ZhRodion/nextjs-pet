@@ -1,0 +1,49 @@
+.adultModalText {
+	font-size: 31px;
+	line-height: 140%;
+}
+
+.boldFont {
+	color: #fdcf55;
+	font-weight: 500;
+}
+
+.adultModalBtnsWrapper {
+	width: 100%;
+	margin: 35px 0 0;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.adultAgreeBtn {
+	width: 100%;
+	max-width: 210px;
+	padding: 15px 10px;
+	color: #000;
+	border-radius: 50px;
+	border: 0;
+	background-color: #fdcf55;
+	font-size: 15px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.adultDisagreeBtn {
+	width: 100%;
+	max-width: 210px;
+	padding: 15px 10px;
+	color: #000;
+	border-radius: 50px;
+	border: 0;
+	background-color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.adultRedirect {
+	width: 100%;
+	max-width: 210px;
+}
