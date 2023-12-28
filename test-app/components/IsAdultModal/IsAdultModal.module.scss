@@ -8,6 +8,9 @@
 .modalBody {
 	padding: 46px 36px 100px;
 	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 10002;
 	border-radius: 20px;
 	background: #262022;
