@@ -1,3 +1,18 @@
+.modalPageWrapper {
+	position: fixed;
+	z-index: 1001;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+}
+
+.modalBody {
+	padding: 46px 36px 100px;
+	position: fixed;
+	z-index: 10002;
+	border-radius: 20px;
+	background: #262022;
+}
+
 .adultModalText {
 	font-size: 31px;
 	line-height: 140%;
