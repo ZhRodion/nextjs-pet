@@ -1,8 +1,7 @@
 'use effect'
 
-import Cookies from 'js-cookie'
-
 import IsAdultModal from '@/IsAdultModal/IsAdultModal'
+import Cookies from 'js-cookie'
 import { createPortal } from 'react-dom'
 
 const ModalPortal = () => {
