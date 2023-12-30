@@ -1,6 +1,7 @@
 'use client'
 
 import EmptyBasket from '@/EmptyBasket/EmptyBasket'
+import HeroSection from '@/HeroSection/HeroSection'
 import ShoppingBasketItem from '@/ShoppingBasketItem/ShoppingBasketItem'
 import ShoppingBasketList from '@/ShoppingBasketList/ShoppingBasketList'
 import Spiner from '@/Spiner/Spiner'
@@ -13,25 +14,28 @@ export default function PageCatalog() {
 	const basketItems = usePersistedStore(useBasketStore, state => state.basket)
 
 	return (
-		<ShoppingBasketList>
-			{/* Показываем спиннер, если корзина еще не загружена */}
-			{!basketItems && <Spiner />}
-			{/* Выделяем место под будущие элементы, чтобы избежать дерганий */}
-			{basketItems &&
-				(basketItems.length > 0 ? (
-					basketItems?.map(item => (
-						<ShoppingBasketItem
-							key={uuidv4()}
-							id={item.id}
-							cardImgSrc={item.cardImgSrc}
-							catalogCardHeading={item.catalogCardHeading}
-							catalogItemDescription={item.catalogItemDescription}
-							catalogItemPrice={item.catalogItemPrice}
-						/>
-					))
-				) : (
-					<EmptyBasket />
-				))}
-		</ShoppingBasketList>
+		<div>
+			<HeroSection sectionTitle='Корзина' />
+			<ShoppingBasketList>
+				{/* Показываем спиннер, если корзина еще не загружена */}
+				{!basketItems && <Spiner />}
+				{/* Выделяем место под будущие элементы, чтобы избежать дерганий */}
+				{basketItems &&
+					(basketItems.length > 0 ? (
+						basketItems?.map(item => (
+							<ShoppingBasketItem
+								key={uuidv4()}
+								id={item.id}
+								cardImgSrc={item.cardImgSrc}
+								catalogCardHeading={item.catalogCardHeading}
+								catalogItemDescription={item.catalogItemDescription}
+								catalogItemPrice={item.catalogItemPrice}
+							/>
+						))
+					) : (
+						<EmptyBasket />
+					))}
+			</ShoppingBasketList>
+		</div>
 	)
 }

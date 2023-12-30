@@ -1,6 +1,6 @@
 import styles from '@/Header/MainHeader/MainHeader.module.scss'
 import MainHeaderNav, { ListItem } from '@/Header/MainHeaderNav/MainHeaderNav'
-import MainHeaderSearch from '@/Header/MainHeaderSearch/MainHeaderSearch'
+import MainHeaderProfile from '@/Header/MainHeaderProfile/MainHeaderProfile'
 import MainHeaderShopBasket from '@/Header/MainHeaderShopBasket/MainHeaderShopBasket'
 import SocialMedia from '@/SocialMedia/SocialMedia'
 import Image from 'next/image'
@@ -31,7 +31,7 @@ const MainHeader: FC = () => {
 						<span className={styles.logoText}>Wunderbeer</span>
 					</div>
 					<div className={styles.mainHeaderSearcAndBasketWrapper}>
-						<MainHeaderSearch />
+						<MainHeaderProfile />
 						<MainHeaderShopBasket />
 					</div>
 				</div>

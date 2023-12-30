@@ -1,0 +1,84 @@
+.userProfile {
+	width: 100%;
+	padding: 56px 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.userProfileData {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.userProfileName {
+	color: #000;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 125%;
+	margin: 0 auto;
+}
+
+.userName {
+	color: #000;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+	text-decoration-line: underline;
+}
+
+.userProfileDetailDataList {
+	width: 100%;
+	max-width: 460px;
+	display: flex;
+	flex-direction: column;
+	gap: 31px;
+}
+
+.userProfileDetailDataItem {
+	display: flex;
+	justify-content: space-between;
+}
+
+.userProfileDetailItemHeading {
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 166.667%;
+}
+
+.userProfileNotPrivateData {
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 166.667%;
+}
+
+.changeUserDataBtn {
+	color: #fdcf55;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 166.667%;
+	text-decoration-line: underline;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.doneBtn {
+	width: 100%;
+	max-width: 255px;
+	padding: 11px 0;
+	margin: 0 auto;
+	border-radius: 50px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	background-color: #fdcf55;
+}

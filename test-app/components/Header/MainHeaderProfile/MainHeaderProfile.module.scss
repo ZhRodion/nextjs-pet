@@ -1,0 +1,16 @@
+.mainHeaderProfile {
+	width: 100%;
+	max-width: 30px;
+}
+
+.mainHeaderLink {
+	&:hover {
+		.profileImage {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.profileImage {
+	transition: all 0.3s ease-in-out;
+}

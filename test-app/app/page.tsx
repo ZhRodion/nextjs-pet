@@ -1,7 +1,9 @@
 'use client'
 
 import CatalogSection from '@/../components/CatalogSection/CatalogSection'
+import HeroSection from '@/HeroSection/HeroSection'
 import ModalPortal from '@/ModalPortal/ModalPortal'
+import SignUp from '@/SignUp/SignUp'
 import { FC } from 'react'
 
 // export const metadata: Metadata = {
@@ -12,8 +14,10 @@ import { FC } from 'react'
 const AppMainPage: FC = () => {
 	return (
 		<div>
+			<HeroSection sectionTitle='Каталог' />
 			<CatalogSection />
 			<ModalPortal />
+			<SignUp />
 		</div>
 	)
 }
